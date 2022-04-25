@@ -1,5 +1,5 @@
 import { render } from "react-dom";
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import Details from "./Details";
 import SearchParams from "./SearchParams";
 
@@ -8,15 +8,13 @@ const App = () => {
     <div>
       <Router>
         <header>
-          <Link to='/'>
-            <h1>Adopt Me!</h1>
-          </Link>
+          <Link to="/">Adopt Me!</Link>
         </header>
         <Switch>
-          <Route path='/details/:id' >
+          <Route path="/details/:id">
             <Details />
           </Route>
-          <Route path='/'>
+          <Route path="/">
             <SearchParams />
           </Route>
         </Switch>
@@ -25,4 +23,9 @@ const App = () => {
   );
 };
 
-render(<App />, document.getElementById("root"));
+render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.getElementById("root")
+);

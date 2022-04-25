@@ -12,8 +12,9 @@
     "react/react-in-jsx-scope": 0
   },
   "plugins": ["react", "import", "jsx-a11y"],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
